@@ -9,7 +9,6 @@ LockManagerA::LockManagerA(deque<Txn*>* ready_txns) {
 }
 
 bool LockManagerA::WriteLock(Txn* txn, const Key& key) {
-  // CPSC 638:
   //
   // Implement this method!
   return true;
@@ -22,13 +21,11 @@ bool LockManagerA::ReadLock(Txn* txn, const Key& key) {
 }
 
 void LockManagerA::Release(Txn* txn, const Key& key) {
-  // CPSC 638:
   //
   // Implement this method!
 }
 
 LockMode LockManagerA::Status(const Key& key, vector<Txn*>* owners) {
-  // CPSC 638:
   //
   // Implement this method!
   return UNLOCKED;
@@ -39,27 +36,23 @@ LockManagerB::LockManagerB(deque<Txn*>* ready_txns) {
 }
 
 bool LockManagerB::WriteLock(Txn* txn, const Key& key) {
-  // CPSC 638:
   //
   // Implement this method!
   return true;
 }
 
 bool LockManagerB::ReadLock(Txn* txn, const Key& key) {
-  // CPSC 638:
   //
   // Implement this method!
   return true;
 }
 
 void LockManagerB::Release(Txn* txn, const Key& key) {
-  // CPSC 638:
   //
   // Implement this method!
 }
 
 LockMode LockManagerB::Status(const Key& key, vector<Txn*>* owners) {
-  // CPSC 638:
   //
   // Implement this method!
   return UNLOCKED;

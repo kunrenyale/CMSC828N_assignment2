@@ -253,7 +253,6 @@ void TxnProcessor::ApplyWrites(Txn* txn) {
 }
 
 void TxnProcessor::RunOCCScheduler() {
-  // CPSC 638:
   //
   // Implement this method!
   //
@@ -264,7 +263,6 @@ void TxnProcessor::RunOCCScheduler() {
 }
 
 void TxnProcessor::RunOCCParallelScheduler() {
-  // CPSC 638:
   //
   // Implement this method! Note that implementing OCC with parallel
   // validation may need to create another method, like
@@ -278,7 +276,6 @@ void TxnProcessor::RunOCCParallelScheduler() {
 }
 
 void TxnProcessor::RunMVCCScheduler() {
-  // CPSC 638:
   //
   // Implement this method!
   

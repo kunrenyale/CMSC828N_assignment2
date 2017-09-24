@@ -40,7 +40,6 @@ void MVCCStorage::Unlock(Key key) {
 
 // MVCC Read
 bool MVCCStorage::Read(Key key, Value* result, int txn_unique_id) {
-  // CPSC 638:
   //
   // Implement this method!
   
@@ -53,7 +52,6 @@ bool MVCCStorage::Read(Key key, Value* result, int txn_unique_id) {
 
 // Check whether apply or abort the write
 bool MVCCStorage::CheckWrite(Key key, int txn_unique_id) {
-  // CPSC 638:
   //
   // Implement this method!
   
@@ -70,7 +68,6 @@ bool MVCCStorage::CheckWrite(Key key, int txn_unique_id) {
 
 // MVCC Write, call this method only if CheckWrite return true.
 void MVCCStorage::Write(Key key, Value value, int txn_unique_id) {
-  // CPSC 638:
   //
   // Implement this method!
   
