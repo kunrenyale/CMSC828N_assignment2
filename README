@@ -266,7 +266,12 @@ Why did our MVCC pseudocode request read locks before each read? In particular, 
 --------------------------------------
 A few important notes on the implementation
 --------------------------------------
-1) You should only put the committed transaction into the txn_results_ queue. Don't put the aborted transaction into the txn_results_ queue.
+1) You should only put the committed transaction into the txn_results_ queue. Don't put the aborted transaction into the txn_results_ queue. Instead, put it into txn_requests_ queue.
+    mutex_.Lock();
+    txn->unique_id_ = next_unique_id_;
+    next_unique_id_++;
+    txn_requests_.Push(txn);
+    mutex_.Unlock(); 
 
 2) Inside your Execution method of MVCC:  when you call read() method to read values from database, please don't forget to provide the third parameter(txn->unique_id_), otherwise the default value is 0 and you always read the oldest version.
 
