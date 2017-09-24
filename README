@@ -161,7 +161,10 @@ Pseudocode to implement in RunOCCParallelScheduler:
       }
 
       for (each txn t in the txn's copy of the active set) {
-        if (txn's write set intersects with t's read or write sets) {
+        if (txn's write set intersects with t's write sets) {
+          Validation fails!
+        }
+        if (txn's read set intersects with t's write sets) {
           Validation fails!
         }
       }
