@@ -78,7 +78,7 @@ The test file 'txn/lock_manager_test.cc' provides some rudimentary correctness t
 -------------------------------------------------------------------------
 Part 1B: Slightly Less Simple Locking (adding in shared locks)  15 points
 -------------------------------------------------------------------------
-To increase concurrency, we can allow transactions with overlapping readsets but disjoing writesets to execute concurrently. We do this by adding in SHARED locks. Again, all data structures already exist, and all you need to implement are the 'WriteLock', 'ReadLock', 'Release', and 'Status' methods in the class 'LockManagerB'.
+To increase concurrency, we can allow transactions with overlapping readsets but disjoint writesets to execute concurrently. We do this by adding in SHARED locks. Again, all data structures already exist, and all you need to implement are the 'WriteLock', 'ReadLock', 'Release', and 'Status' methods in the class 'LockManagerB'.
 
 Again, 'txn/lock_manager_test.cc' provides some basic correctness tests, but you should go beyond these in checking the correctness of your implementation.
 
@@ -194,7 +194,7 @@ Pseudocode to implement in RunOCCParallelScheduler:
 Part 4: Multiversion Timestamp Ordering Concurrency Control.  20 points
 --------------------------------------------------------------------------------
 For MVCC, you will have to implement the 'TxnProcessor::RunMVCCScheduler' method
- based on the pseudocode below. The pseudocode implements a simplied version of MVCC relative to the material we presented in class. 
+ based on the pseudocode below. The pseudocode implements a simplified version of MVCC relative to the material we presented in class. 
 
 Although we give you a version of pseudocode, if you want, you can write your own pseudocode and argue why it's better than the code presented here (see analysis question 6). 
 
@@ -281,5 +281,5 @@ What To Turn In
   * analysis.txt --- Your responses to the analysis questions above
   * files_changed.txt----List of files you changed and what did you change
   * hw2.tar.gz-----Entire codebase that contains all your code
-  * partners.txt --- Listing the other person that you worked with.
+
 
